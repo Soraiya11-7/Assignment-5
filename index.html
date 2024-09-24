@@ -59,7 +59,7 @@
                                 <div>
                                     <img src="assets/coin.png" alt="">
                                 </div>
-                                <h3 class="text-xl font-medium"><span >5500</span> BDT</h3>
+                                <h3 class="text-xl font-medium"><span id="myBalance">5500</span> BDT</h3>
                             </div>
                         </div>
                       </div>
@@ -68,7 +68,7 @@
             </div>
             <!-- banner section..... -->
              <div class="border border-red-500 container bg-white ">
-                <div class="pt-8 sticky top-[137px] backdrop-filter backdrop-blur-xl bg-opacity-30 z-10 mb-8">
+                <div class="pt-14 sticky top-[137px] backdrop-filter backdrop-blur-xl bg-opacity-30 z-10 mb-8">
                     <div class=" flex justify-center items-center gap-8 container w-[80%] mx-auto">
                         <!-- Donation btn -->
                         <div>
@@ -86,18 +86,18 @@
                   <!-- Card-1............................................... -->
                   <div class="p-8 border border-[#1111111A] rounded-2xl box-border lg:flex gap-[4%] mb-8">
                     <!-- img.... -->
-                     <div class="w-[48%] h-[390px] rounded-xl">
+                     <div class="w-full lg:w-[48%] h-[390px] rounded-xl mb-5 lg:mb-0">
                         <img class="w-full h-full" src="assets/noakhali.png" alt="">
                      </div>
                      <!-- donation .... -->
-                      <div class="flex flex-col justify-start w-[48%]">
+                      <div class="flex flex-col justify-start w-full lg:w-[48%]">
                         <!-- Donated Coins -->
                         <div class="inline-flex">
                             <div class="flex justify-center items-center gap-x-2 border  border-yellow-500 py-2 px-4 bg-[#1111110D] mb-4 ">
                                 <div>
                                     <img src="assets/coin.png" alt="">
                                 </div>
-                                <h3 class="text-base font-normal"><span >0</span> BDT</h3>
+                                <h3 class="text-base font-normal"><span id="total-amount-Noakhali" >0</span> BDT</h3>
                             </div>
                         </div>
                         <!--Donation area.... -->
@@ -105,12 +105,11 @@
                         <p class="font-light text-base text-[#111111B3] mb-6">
                             The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
                         </p>
-                        <div class="rounded-lg border  mb-4">
-                            <input type="text" class="w-full text-[#11111166] font-light text-base input border-[#1111111A]" placeholder="Write Donation Amount" />
+                        <div class="rounded-lg border mb-4">
+                            <input type="text" id="donate-for-noakhali" class="w-full text-[#11111166] font-light text-base input border-[#1111111A]" placeholder="Write Donation Amount" autocomplete="off" required />
                         </div>
                   
-                        
-                        <button class="rounded-lg bg-color_1 text-xl font-semibold border  border-yellow-500 py-4 px-8 ">
+                        <button id="donate-btn" class="rounded-lg bg-color_1 text-xl font-semibold py-4 px-8 ">
                             Donate Now
                         </button>
                         
@@ -119,13 +118,13 @@
                  </div>
 
                   <!-- Card-2.................................................... -->
-                  <div class="p-8 border border-[#1111111A] rounded-2xl box-border lg:flex gap-5 mb-8">
+                  <div class="p-8 border border-[#1111111A] rounded-2xl box-border lg:flex gap-[4%] mb-8">
                     <!-- img.... -->
-                     <div class="w-[50%] h-[440px] rounded-xl">
+                     <div class="w-full lg:w-[48%] h-[440px] rounded-xl mb-5 lg:mb-0">
                         <img class="w-full h-full" src="assets/feni.png" alt="">
                      </div>
                      <!-- donation .... -->
-                      <div class="flex flex-col justify-start w-[50%]">
+                      <div class="flex flex-col justify-start w-[48%]">
                         <!-- Donated Coins -->
                         <div class="inline-flex">
                             <div class="flex justify-center items-center gap-x-2 border  border-yellow-500 py-2 px-4 bg-[#1111110D] mb-4 ">
@@ -140,8 +139,8 @@
                         <p class="font-light text-base text-[#111111B3] mb-6">
                             The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.
                         </p>
-                        <div class="p-4 rounded-lg border border-[#1111111A] mb-4">
-                            <input type="text" class="w-full text-[#11111166] font-light text-base" placeholder="Write Donation Amount" />
+                        <div class="rounded-lg border mb-4">
+                            <input type="text" class="w-full text-[#11111166] font-light text-base input border-[#1111111A]" placeholder="Write Donation Amount" />
                         </div>
                         
                         <button class="rounded-lg bg-color_1 text-xl font-semibold border  border-yellow-500 py-4 px-8 ">
@@ -153,13 +152,13 @@
                  </div>
 
                   <!-- Card-3.................................................... -->
-                  <div class="p-8 border border-[#1111111A] rounded-2xl box-border lg:flex gap-5">
+                  <div class="p-8 border border-[#1111111A] rounded-2xl box-border lg:flex gap-[4%]">
                     <!-- img.... -->
-                     <div class="w-[50%] h-[466px] rounded-xl">
+                     <div class="w-full lg:w-[48%] h-[466px] rounded-xl mb-5 lg:mb-0">
                         <img class="w-full h-full" src="assets/quota-protest.png" alt="">
                      </div>
                      <!-- donation .... -->
-                      <div class="flex flex-col justify-start w-[50%]">
+                      <div class="flex flex-col justify-start w-[48%]">
                         <!-- Donated Coins -->
                         <div class="inline-flex">
                             <div class="flex justify-center items-center gap-x-2 border  border-yellow-500 py-2 px-4 bg-[#1111110D] mb-4 ">
@@ -174,11 +173,11 @@
                         <p class="font-light text-base text-[#111111B3] mb-6">
                             The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
                         </p>
-                        <div class="p-4 rounded-lg border border-[#1111111A] mb-4">
-                            <input type="text" class="w-full text-[#11111166] font-light text-base" placeholder="Write Donation Amount" />
+                        <div class="rounded-lg border mb-4">
+                            <input type="text" class="w-full text-[#11111166] font-light text-base input border-[#1111111A]" placeholder="Write Donation Amount" />
                         </div>
                         
-                        <button class="rounded-lg bg-color_1 text-xl font-semibold border  border-yellow-500 py-4 px-8 ">
+                        <button class="rounded-lg bg-color_1 text-xl font-semibold border border-yellow-500 py-4 px-8 ">
                             Donate Now
                         </button>
                         
@@ -194,14 +193,28 @@
 
 
      </header>
-     <!-- main section starts here..................... -->
-     <main>
+     <!-- modal.. -->
 
-     </main>
+<dialog id="myModal" class="modal ">
+  <div class="modal-box text-center">
+    <h3 class="text-2xl font-bold">Congrates!</h3>
+    <h2 class="py-4 flex justify-center"><img src="./assets/coin.png" alt=""></h2>
+    <p class="py-4 text-base">You Have Donated for Humankind</p>
+    <h2 class="font-bold text-xl">Successfully</h2>
+    <div class="modal-action flex justify-center">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">close confirmation</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+     
+   
      <!-- Footer section starts here..... -->
       <footer class="mt-20 bg-[#F9F7F3] h-[145px]">
-
       </footer>
+      <script src="./donation.js"></script>
     
 </body>
 </html>
