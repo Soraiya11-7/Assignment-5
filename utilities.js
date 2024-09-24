@@ -18,7 +18,7 @@ function addDonationByID(addDonation,myBalance,getTotalAmount){
         totalNewDonatedAmount += donatedAmount;
         myBalanceAmount -= donatedAmount;
         
-        return [totalNewDonatedAmount,myBalanceAmount];
+        return [totalNewDonatedAmount,myBalanceAmount,donatedAmount];
     }
     else{
         alert("Invalid Amount!! please try again.");

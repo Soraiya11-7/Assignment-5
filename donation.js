@@ -21,8 +21,24 @@ donationBtn.addEventListener('click', function(event){
         document.getElementById('myBalance').innerText = result[1];
         modal.showModal();
     }
-    
     document.getElementById('donate-for-noakhali').value = "";
+    // added transaction history ......
+
+    const time = new Date();
+    const div = document.createElement('div');
+    div.classList.add('border','border-gray-200','mb-8','p-8','rounded-lg');
+    const h2 = document.createElement('h2');
+    h2.textContent = `${result[2]} Taka is Donated for famine-2024 at Feni, Bangladesh`;
+    h2.classList.add('font-bold','text-lg');
+    const h3 = document.createElement('h3');
+    h3.textContent = `Date: ${time}`;
+    h3.classList.add('text-base','font-normal');
+    div.appendChild(h2);
+    div.appendChild(h3);
+    document.getElementById('transaction-container').appendChild(div);
+
+
+    
 
 });
 
