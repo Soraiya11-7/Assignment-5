@@ -21,8 +21,19 @@ function addDonationByID(addDonation,myBalance,getTotalAmount){
         return [totalNewDonatedAmount,myBalanceAmount];
     }
     else{
-        alert("Invalid Amount!");
+        alert("Invalid Amount!! please try again.");
     }
    
 
+}
+
+
+// function 2...........
+function showSectionById(id){
+    // hides all the sections
+    document.getElementById('donation-container').classList.add('hidden');
+    document.getElementById('history').classList.add('hidden');
+
+    // show the section with the provided id as parameter
+    document.getElementById(id).classList.remove('hidden');
 }

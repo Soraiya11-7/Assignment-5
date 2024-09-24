@@ -66,23 +66,23 @@
                 </nav>
     
             </div>
-            <!-- banner section..... -->
+            <!-- Donation banner section..... -->
              <div class="border border-red-500 container bg-white ">
                 <div class="pt-14 sticky top-[137px] backdrop-filter backdrop-blur-xl bg-opacity-30 z-10 mb-8">
                     <div class=" flex justify-center items-center gap-8 container w-[90%] lg:w-[80%] mx-auto">
                         <!-- Donation btn -->
                         <div>
-                            <a href="" class="btn w-[157px] rounded-lg bg-color_1 text-xl font-semibold ">Donation</a>
+                            <a id="donation-btn" href="" class="btn w-[157px] rounded-lg bg-color_1 text-xl font-semibold ">Donation</a>
                         </div>
                         <!-- history btn... -->
                          <div>
-                            <a href="" class="btn w-[136px] rounded-lg bg-none text-xl font-medium border  border-[#1111114D]">History</a>
+                            <a id="history-btn" class="btn w-[136px] rounded-lg bg-none text-xl font-medium border  border-[#1111114D]">History</a>
                          </div>
                     </div>
                 </div>
 
                 <!-- card.................................. -->
-              <div class="container w-[90%] lg:w-[80%] mx-auto">
+              <div id="donation-container" class="container w-[90%] lg:w-[80%] mx-auto">
                   <!-- Card-1............................................... -->
                   <div class="p-8 border border-[#1111111A] rounded-2xl box-border lg:flex gap-[4%] mb-8">
                     <!-- img.... -->
@@ -186,9 +186,20 @@
                  </div>
               </div>
 
+              <!-- History section... -->
+              <div id="history" class="hidden min-h-52 container w-[90%] lg:w-[80%] mx-auto">
+                <div id="transaction-container" class=" bg-white">
 
+
+                </div>
+
+              </div>
 
              </div>
+
+             
+
+
         </div>
 
 
@@ -217,6 +228,7 @@
       
       <script src="./donation.js"></script>
       <script src="./utilities.js"></script>
+      <script src="./history.js"></script>
     
 </body>
 </html>
