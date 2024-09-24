@@ -1,44 +1,79 @@
-// console.log("connected.....");
+
+const modal = document.getElementById('myModal');
+// 1st card......................................................................................................
 const donationBtn = document.getElementById('donate-btn');
 donationBtn.addEventListener('click', function(event){
     
     // event.preventDefault();
     // input field value
-    const addDonation = document.getElementById('donate-for-noakhali').value;
-    let addDonationNoakhali = parseFloat(addDonation);
+    // const addDonation = document.getElementById('donate-for-noakhali').value;
+    // Actual account Balance............
+    // const myBalance = document.getElementById('myBalance').innerText;
+    //newAdded  Balance................
+    // const getTotalAmountNoakhali = document.getElementById('total-amount-Noakhali').innerText;
 
 
-    // Actual account Balance
-    const myBalance = document.getElementById('myBalance').innerText;
-    let myBalanceAmount = parseFloat(myBalance);
-
-    //newAdded  Balance
-    const getTotalAmountNoakhali = document.getElementById('total-amount-Noakhali').innerText;
-    let amountOfNoakhali = parseFloat(getTotalAmountNoakhali);
-    console.log("amonut of Noakhali", amountOfNoakhali);
-
-
-    console.log(addDonation, myBalance);
-    console.log("myBalanceAmount",myBalanceAmount);
-//    
-// console.log(typeof addDonation);
-
-const modal = document.getElementById('myModal');
-    if((!isNaN(addDonation) && addDonationNoakhali > 0 ) && addDonationNoakhali <= myBalanceAmount){
-        
-        amountOfNoakhali += addDonationNoakhali;
-        document.getElementById('total-amount-Noakhali').innerText = amountOfNoakhali;
-
-        myBalanceAmount -= addDonationNoakhali;
-        document.getElementById('myBalance').innerText = myBalanceAmount;
+//   const modal = document.getElementById('myModal');
+// function call.............
+    const result = addDonationByID('donate-for-noakhali','myBalance','total-amount-Noakhali' );
+    if(result){
+        document.getElementById('total-amount-Noakhali').innerText = result[0];
+        document.getElementById('myBalance').innerText = result[1];
         modal.showModal();
     }
-    else{
-        alert("Invalid Amount");
-    }
-    console.log(myBalanceAmount);
-
+    
     document.getElementById('donate-for-noakhali').value = "";
 
-})
-// console.log(document.getElementById('myBalance').innerText, document.getElementById('donate-for-noakhali').value);
+});
+
+
+// 2nd card......................................................................................................
+const donationBtn_2 = document.getElementById('donate-btn-2');
+donationBtn_2.addEventListener('click', function(event){
+    
+    // event.preventDefault();
+    // // input field value
+    // const addDonation_2 = document.getElementById('donate-for-feni').value;
+    // // Actual account Balance............
+    // const myBalance = document.getElementById('myBalance').innerText;
+    // //newAdded  Balance................
+    // const getTotalAmountFeni = document.getElementById('total-amount-Feni').innerText;
+
+
+//   const modal = document.getElementById('myModal');
+// function call.............
+    const result2 = addDonationByID('donate-for-feni','myBalance','total-amount-Feni' );
+    if(result2){
+        document.getElementById('total-amount-Feni').innerText = result2[0];
+        document.getElementById('myBalance').innerText = result2[1];
+        modal.showModal();
+    }
+    
+    document.getElementById('donate-for-feni').value = "";
+
+});
+
+
+// 3rd card......................................................................................................
+const donationBtn_3 = document.getElementById('donate-btn-3');
+donationBtn_3.addEventListener('click', function(event){
+    
+    // // event.preventDefault();
+    // // input field value
+    // const addDonation_3 = document.getElementById('donate-for-Qm').value;
+    // // Actual account Balance............
+    // const myBalance = document.getElementById('myBalance').innerText;
+    // //newAdded  Balance................
+    // const getTotalAmountQm = document.getElementById('total-amount-Qm').innerText;
+
+// function call.............
+    const result3 = addDonationByID('donate-for-Qm','myBalance','total-amount-Qm' );
+    if(result3){
+        document.getElementById('total-amount-Qm').innerText = result3[0];
+        document.getElementById('myBalance').innerText = result3[1];
+        modal.showModal();
+    }
+    
+    document.getElementById('donate-for-Qm').value = "";
+
+});
