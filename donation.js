@@ -48,8 +48,6 @@ function transactionHistory(cardNum,donatedAmount){
 
 }
 
-
-
 // Modal........
 const modal = document.getElementById('myModal');
 
