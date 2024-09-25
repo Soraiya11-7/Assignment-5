@@ -1,11 +1,11 @@
 
-function addDonationByID(addDonation,myBalance,getTotalAmount){
+function addDonationByID(addDonation,getTotalAmount){
      // input field value
     const addDonationValue = document.getElementById(addDonation).value;
     let donatedAmount = parseFloat(addDonationValue);
 
     // Actual account Balance
-    const myBalanceValue = document.getElementById(myBalance).innerText;
+    const myBalanceValue = document.getElementById('myBalance').innerText;
     let myBalanceAmount = parseFloat(myBalanceValue);
 
     //newAdded  Balance
@@ -17,16 +17,14 @@ function addDonationByID(addDonation,myBalance,getTotalAmount){
         
         totalNewDonatedAmount += donatedAmount;
         myBalanceAmount -= donatedAmount;
-        
-        return [totalNewDonatedAmount,myBalanceAmount,donatedAmount];
+        // document.getElementById('myBalance').innerText = myBalanceAmount; 
+        return [totalNewDonatedAmount,donatedAmount];
     }
     else{
-        alert("Invalid Amount!! please try again.");
+        alert("Invalid Donation Amount!!");
     }
    
-
 }
-
 
 // function 2...........
 function showSectionById(id){
@@ -37,3 +35,4 @@ function showSectionById(id){
     // show the section with the provided id as parameter
     document.getElementById(id).classList.remove('hidden');
 }
+

@@ -1,43 +1,85 @@
 
-const modal = document.getElementById('myModal');
-// 1st card......................................................................................................
-const donationBtn = document.getElementById('donate-btn');
-donationBtn.addEventListener('click', function(event){
-    
-    // event.preventDefault();
-    // input field value
-    // const addDonation = document.getElementById('donate-for-noakhali').value;
-    // Actual account Balance............
-    // const myBalance = document.getElementById('myBalance').innerText;
-    //newAdded  Balance................
-    // const getTotalAmountNoakhali = document.getElementById('total-amount-Noakhali').innerText;
+let currentBalance = parseFloat(document.getElementById('myBalance').innerText);
 
+document.getElementById('history-btn').addEventListener('click', function(){
+    document.getElementById('donation-btn').classList.remove('bg-color_1','font-extrabold');
+    document.getElementById('donation-btn').classList.add('bg-none','border','border-[#1111114D]','font-light','text-[#1111114D]', 'text-opacity-0.7');
+    document.getElementById('history-btn').classList.add('bg-color_1','font-extrabold');
+    document.getElementById('history-btn').classList.remove('border','border-[#1111114D]','font-light','text-[#1111114D]', 'text-opacity-0.7');
 
-//   const modal = document.getElementById('myModal');
-// function call.............
-    const result = addDonationByID('donate-for-noakhali','myBalance','total-amount-Noakhali' );
-    if(result){
-        document.getElementById('total-amount-Noakhali').innerText = result[0];
-        document.getElementById('myBalance').innerText = result[1];
-        modal.showModal();
-    }
-    document.getElementById('donate-for-noakhali').value = "";
-    // added transaction history ......
+    showSectionById('history');
+});
 
+document.getElementById('donation-btn').addEventListener('click', function(){
+    document.getElementById('donation-btn').classList.remove('border','border-[#1111114D]','text-[#1111114D]', 'text-opacity-0.7');
+    document.getElementById('donation-btn').classList.add('bg-color_1','font-extrabold');
+    document.getElementById('history-btn').classList.add('bg-none','border','border-[#1111114D]','font-light','text-[#1111114D]', 'text-opacity-0.7');
+    document.getElementById('history-btn').classList.remove('bg-color_1','font-extrabold');
+
+    showSectionById('donation-container');
+    document.getElementById('myBalance').innerText = currentBalance;
+});
+
+// Transaction History....
+function transactionHistory(cardNum,donatedAmount){
     const time = new Date();
     const div = document.createElement('div');
     div.classList.add('border','border-gray-200','mb-8','p-8','rounded-lg');
     const h2 = document.createElement('h2');
-    h2.textContent = `${result[2]} Taka is Donated for famine-2024 at Feni, Bangladesh`;
-    h2.classList.add('font-bold','text-lg');
+    if(cardNum === 1){
+        h2.textContent = `${donatedAmount} Taka is Donated for famine-2024 at Feni, Bangladesh`;
+    }
+    else if(cardNum === 2){
+        h2.textContent = `${donatedAmount} Taka is Donated for Flood Relief in Feni, Bangladesh`;
+    }
+    else{
+        h2.textContent = `${donatedAmount} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh`;
+    }
+    h2.classList.add('font-bold','text-base','lg:text-xl','mb-2');
     const h3 = document.createElement('h3');
     h3.textContent = `Date: ${time}`;
-    h3.classList.add('text-base','font-normal');
+    h3.classList.add('text-sm','lg:text-base','font-normal');
     div.appendChild(h2);
     div.appendChild(h3);
     document.getElementById('transaction-container').appendChild(div);
+    return true;
+
+}
 
 
+
+// Modal........
+const modal = document.getElementById('myModal');
+
+// 1st card......................................................................................................
+const donationBtn = document.getElementById('donate-btn');
+donationBtn.addEventListener('click', function(){
+
+// function call.............
+    const result = addDonationByID('donate-for-noakhali','total-amount-Noakhali' );
+    if(result){
+        document.getElementById('total-amount-Noakhali').innerText = result[0];
+        currentBalance -= result[1];
+        document.getElementById('myBalance').innerText = currentBalance; 
+        modal.showModal();
+        transactionHistory(1,result[1]);
+    }
+    document.getElementById('donate-for-noakhali').value = "";
+
+    // added transaction history ......
+
+    // const time = new Date();
+    // const div = document.createElement('div');
+    // div.classList.add('border','border-gray-200','mb-8','p-8','rounded-lg');
+    // const h2 = document.createElement('h2');
+    // h2.textContent = `${result[1]} Taka is Donated for famine-2024 at Feni, Bangladesh`;
+    // h2.classList.add('font-bold','text-lg');
+    // const h3 = document.createElement('h3');
+    // h3.textContent = `Date: ${time}`;
+    // h3.classList.add('text-base','font-normal');
+    // div.appendChild(h2);
+    // div.appendChild(h3);
+    // document.getElementById('transaction-container').appendChild(div);
     
 
 });
@@ -45,51 +87,66 @@ donationBtn.addEventListener('click', function(event){
 
 // 2nd card......................................................................................................
 const donationBtn_2 = document.getElementById('donate-btn-2');
-donationBtn_2.addEventListener('click', function(event){
-    
-    // event.preventDefault();
-    // // input field value
-    // const addDonation_2 = document.getElementById('donate-for-feni').value;
-    // // Actual account Balance............
-    // const myBalance = document.getElementById('myBalance').innerText;
-    // //newAdded  Balance................
-    // const getTotalAmountFeni = document.getElementById('total-amount-Feni').innerText;
+donationBtn_2.addEventListener('click', function(){
 
-
-//   const modal = document.getElementById('myModal');
 // function call.............
-    const result2 = addDonationByID('donate-for-feni','myBalance','total-amount-Feni' );
+    const result2 = addDonationByID('donate-for-feni','total-amount-Feni' );
     if(result2){
         document.getElementById('total-amount-Feni').innerText = result2[0];
-        document.getElementById('myBalance').innerText = result2[1];
+        currentBalance -= result2[1];
+        document.getElementById('myBalance').innerText = currentBalance; 
+   
         modal.showModal();
-    }
-    
+        transactionHistory(2,result2[1]);
+    } 
     document.getElementById('donate-for-feni').value = "";
+
+    // added transaction history ......
+    // const time = new Date();
+    // const div = document.createElement('div');
+    // div.classList.add('border','border-gray-200','mb-8','p-8','rounded-lg');
+    // const h2 = document.createElement('h2');
+    // h2.textContent = `${result2[1]} Taka is Donated for Flood Relief in Feni, Bangladesh`;
+    // h2.classList.add('font-bold','text-lg');
+    // const h3 = document.createElement('h3');
+    // h3.textContent = `Date: ${time}`;
+    // h3.classList.add('text-base','font-normal');
+    // div.appendChild(h2);
+    // div.appendChild(h3);
+    // document.getElementById('transaction-container').appendChild(div);
 
 });
 
 
 // 3rd card......................................................................................................
 const donationBtn_3 = document.getElementById('donate-btn-3');
-donationBtn_3.addEventListener('click', function(event){
+donationBtn_3.addEventListener('click', function(){
     
-    // // event.preventDefault();
-    // // input field value
-    // const addDonation_3 = document.getElementById('donate-for-Qm').value;
-    // // Actual account Balance............
-    // const myBalance = document.getElementById('myBalance').innerText;
-    // //newAdded  Balance................
-    // const getTotalAmountQm = document.getElementById('total-amount-Qm').innerText;
-
 // function call.............
-    const result3 = addDonationByID('donate-for-Qm','myBalance','total-amount-Qm' );
+    const result3 = addDonationByID('donate-for-Qm','total-amount-Qm' );
     if(result3){
         document.getElementById('total-amount-Qm').innerText = result3[0];
-        document.getElementById('myBalance').innerText = result3[1];
+        currentBalance -= result3[1];
+        document.getElementById('myBalance').innerText = currentBalance;  
         modal.showModal();
+        transactionHistory(3,result3[1]);
     }
-    
     document.getElementById('donate-for-Qm').value = "";
 
+    // added transaction history ......
+    // const time = new Date();
+    // const div = document.createElement('div');
+    // div.classList.add('border','border-gray-200','mb-8','p-8','rounded-lg');
+    // const h2 = document.createElement('h2');
+    // h2.textContent = `${result3[1]} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh`;
+    // h2.classList.add('font-bold','text-lg');
+    // const h3 = document.createElement('h3');
+    // h3.textContent = `Date: ${time}`;
+    // h3.classList.add('text-base','font-normal');
+    // div.appendChild(h2);
+    // div.appendChild(h3);
+    // document.getElementById('transaction-container').appendChild(div);
+
 });
+
+
