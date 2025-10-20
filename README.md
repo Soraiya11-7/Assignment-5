@@ -73,7 +73,7 @@ npx live-server
 --- 
 
 
-🚀 Make a difference with **Donate Bangladesh**! 🇧🇩❤️🤝
+🚀 Make a difference with **Donate Bangladesh**! ❤️🤝
 
 
 
