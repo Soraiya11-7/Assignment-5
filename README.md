@@ -1,4 +1,4 @@
-# Donate Bangladesh
+#  Donate Bangladesh
 
 ## 📊  Project Overview
 
@@ -64,11 +64,11 @@ npx live-server
 
 ## 🎯 Usage Guide
 
-✔ **View Donation Causes:** Click **Donation** button to see available causes.  
-✔ **Make a Donation:** Enter amount and click **Donate Now**.  
-✔ **Check History:** Click **History** to view past transactions.
-✔ **Read Blog:** Click **Blog** to access educational content.
-✔ **Monitor Balance:** Account balance displayed in navigation bar.
+- **View Donation Causes:** Click **Donation** button to see available causes.  
+- **Make a Donation:** Enter amount and click **Donate Now**.  
+- **Check History:** Click **History** to view past transactions.
+- **Read Blog:** Click **Blog** to access educational content.
+- **Monitor Balance:** Account balance displayed in navigation bar.
 --- 
 
 
