@@ -17,14 +17,14 @@
 
 ## 🎯 Core Functionalities
 
-- **Donation Management**: Real-time balance updates and live donation amount tracking
-- **Transaction History**: Complete donation records with timestamps and details
-- **Input Validation**: Comprehensive amount validation with user feedback
-- **Tab Switching**: Toggle between Donation and History views with active state indicators
-- **Responsive Design**: Mobile-first responsive layout for all devices
-- **Sticky Navigation**: Fixed navbar with constant access to features
-- **Active States**: Visual button states showing current active section
-- **Modal System**: Custom confirmation modals with close functionality
+- **Donation Management**: Real-time balance updates and live donation amount tracking.
+- **Transaction History**: Complete donation records with timestamps and details.
+- **Input Validation**: Comprehensive amount validation with user feedback.
+- **Tab Switching**: Toggle between Donation and History views with active state indicators.
+- **Responsive Design**: Mobile-first responsive layout for all devices.
+- **Sticky Navigation**: Fixed navbar with constant access to features.
+- **Active States**: Visual button states showing current active section.
+- **Modal System**: Custom confirmation modals with close functionality.
 
 ---
 
